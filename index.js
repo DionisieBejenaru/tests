@@ -39,19 +39,59 @@
 
 // if else конструкции для проверки условий. Если одно не выполняется, тогда выполняется другое.\
 
-function checkPayment (amount, balance) {
-    if (amount <= balance) {
-        return 'Оплата прошла'
-    } else {
-        return 'Недостаточно средств'
-    }
-}
+// function checkPayment (amount, balance) {
+//     if (amount <= balance) {
+//         return 'Оплата прошла'
+//     } else {
+//         return 'Недостаточно средств'
+//     }
+// }
 
-console.log(checkPayment (50, 100) )
-console.log(checkPayment (100, 50) )
-console.log(checkPayment (100, 100) )
-let a = "null"
-let somebool = a 
-a = null
-if (somebool)
-    console.log("popa")
+// console.log(checkPayment (50, 100) )
+// console.log(checkPayment (100, 50) )
+// console.log(checkPayment (100, 100) )
+// let a = "null"
+// let somebool = a 
+// a = null
+// if (somebool)
+//     console.log("popa")
+
+
+
+// const products = [
+//     {
+//         pName: "Телефон",
+//         price: 20000,
+//         inStock: true
+//     },
+//     {
+//         pName: "Ноутбук",
+//         price: 16000,
+//         inStock: true
+//     },
+//     {
+//         pName: "Планшет",
+//         price: 25000,
+//         inStock: true
+//     },
+//     {
+//         pName: "Наушники",
+//         price: 5000,
+//         inStock: true
+//     },
+//     {
+//         pName: "Колонка",
+//         price: 3000,
+//         inStock: false
+//     },
+//     {
+//         pName: "Часы",
+//         price: 7000,
+//         inStock: false
+//     }
+// ]
+
+// function checkProducts (products, lowPrice) {
+//     return products.filter(product => product.price < lowPrice && product.inStock === true);
+// }
+// console.log(checkProducts(products, 10000))

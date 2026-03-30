@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой Тестовый Банк</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; background: #f0f2f5; }
+        .card { background: white; padding: 20px; border-radius: 15px; shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; text-align: center; margin-top: 50px; border: 2px solid #007bff; }
+        h1 { color: #333; }
+        #balance { font-size: 2em; color: #28a745; margin: 10px 0; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Maib Daily</h1>
+        <div id="balance">50.00</div>
+        <p>Валюта: <strong>MDL</strong></p>
+        <button id="payBtn">Списать 10.50 MDL</button>
+    </div>
+
+    <script>
+        // Находим элементы на странице
+        const balanceElement = document.getElementById('balance');
+        const button = document.getElementById('payBtn');
+
+        let currentBalance = 50.00;
+
+        // Логика кнопки
+        button.addEventListener('click', () => {
+            if (currentBalance >= 10.50) {
+                currentBalance = currentBalance - 10.50;
+                // Обновляем текст на экране (округляем до 2 знаков)
+                balanceElement.innerText = currentBalance.toFixed(2);
+            } else {
+                alert("Недостаточно средств!");
+                balanceElement.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
