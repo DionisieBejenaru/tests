@@ -7,22 +7,16 @@ function addToFridge(item) {
 }
 
 function removeFromFridge(productId) {
-    const item = myFridge.find(item => item.productId === productId);
-    if (item) {
-        myFridge.pop(item);
-        console.log("Product with name " + item.productName + " has been removed from the fridge.");
+    const itemToRemove = myFridge.find(item => item.productId === productId);
+
+    myFridge = myFridge.filter(item => item.productId !== productId);
+
+    if (itemToRemove) {
+        console.log("Product " + itemToRemove.productName + " was deleted from the fridge");
     } else {
-        console.log("Product with ID " + productId + " not found in the fridge.");
+        console.log("Product not found");
     }
 }
-
-addToFridge({
-    productName : "milk",
-    productPrice : 2.5,
-    productQuantity : 1,
-    expirationDate : "2026-04-07"
-})
-
 addToFridge({
     productName : "eggs",
     productPrice : 1.0,
@@ -39,10 +33,7 @@ addToFridge({
 myFridge.forEach(element => {
     element.productId = id++;
 });
+console.log(myFridge)   
+removeFromFridge(1)
 
-    
-removeFromFridge(5)
-
-
-
-console.log(myFridge)
+console.log(myFridge)  
