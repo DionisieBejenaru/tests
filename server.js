@@ -15,7 +15,7 @@ function getBalanceFromFile() {
     const data = fs.readFileSync(FILE_PATH);
     return JSON.parse(data).balance;
 }
-
+///
 // Функция 2: Сохраняем новый баланс в файл
 function saveBalanceToFile(newBalance) {
     fs.writeFileSync(FILE_PATH, JSON.stringify({ balance: newBalance }));
